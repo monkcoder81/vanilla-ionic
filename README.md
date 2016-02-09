@@ -1,2 +1,2 @@
 # hello-world
-mi primer proyecto
+This is my first project. I hope next one will be more interesting.
