@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>App</title>
+  <meta name="description" content="Some slide and push menu demos using CSS3 transitions.">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="css/ionic.css">
+      <link rel="stylesheet" type="text/css" href="css/ionicons.css">
+      <link rel="stylesheet" type="text/css" href="css/ionic.min.css">
+
+</head>
+<body>
+
+<div id="o-wrapper" class="o-wrapper" style="height: 100%!important">
+
+
+
+  <main class="o-content" style="height:100%!important">
+    <div class="bar bar-header bar-balanced">
+        <button  class="button icon ion-navicon" id="c-button--push-left"></button>
+      <h1 class="title"><span id="header-text">bar-balanced</span></h1>
+    </div>
+    <div id="MainContent" class="o-container">
+
+
+
+
+    </div><!-- /o-container -->
+
+  </main><!-- /o-content -->
+
+
+
+</div><!-- /o-wrapper -->
+
+<nav id="c-menu--push-left" class="c-menu c-menu--push-left">
+  <button class="c-menu__close">&larr; Close Menu</button>
+  <ul class="c-menu__items">
+    <li class="c-menu__item"><a onclick="controller('views/home.html')" href="#" class="c-menu__link">Home</a></li>
+    <li class="c-menu__item"><a onclick="controller('views/services.html')" href="#" class="c-menu__link">Services</a></li>
+	
+    <li class="c-menu__item"><a onclick="controller('views/contact.html')" href="#" class="c-menu__link">Contact</a></li>
+	  <li class="c-menu__item"><a onclick="controller('views/find.html')" href="#" class="c-menu__link">Where To Find Us</a></li>
+   
+
+  </ul>
+</nav><!-- /c-menu push-left -->
+
+
+<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+
+<!-- menus script -->
+<script src="js/dist/menu.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+
+
+/**
+   * Push left instantiation and action.
+   */
+  var pushLeft = new Menu({
+    wrapper: '#o-wrapper',
+    type: 'push-left',
+    menuOpenerClass: '.c-button',
+    maskId: '#c-mask'
+  });
+
+  var pushLeftBtn = document.querySelector('#c-button--push-left');
+
+  pushLeftBtn.addEventListener('click', function(e) {
+    e.preventDefault;
+    pushLeft.open();
+  })
+
+
+controller('views/home.html');
+
+</script>
+
+<!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE -->
+<script src="js/dist/githubIcons.js"></script>
+<script src="js/dist/carbonAd.js"></script>
+
+
+
+</body>
+</html>
