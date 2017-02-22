@@ -1,3 +1,5 @@
-# hello-world
-Esto es un cambio que he realizado en el readme
-Esto es un segundo cambio
+# jquery-ionic-css
+
+This is a cordova app with a side menu which uses the ionic css components.
+
+The sections are loaded via 
